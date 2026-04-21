@@ -1,0 +1,12 @@
+dw_bootcamp:          # Nome do perfil — deve ser igual ao campo "profile" do dbt_project.yml
+  target: dev         # Target padrão usado quando você roda "dbt run"
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      port: 5433      # Porta que mapeamos no docker-compose
+      user: postgres
+      password: postgres
+      dbname: dbt_db  # Banco criado pelo Docker
+      schema: public
+      threads: 4      # Paralelismo: quantos modelos rodam ao mesmo tempo

@@ -1,0 +1,4 @@
+# 3_airflow/requirements.txt
+
+astronomer-cosmos              # Integração dbt + Airflow: converte projeto dbt em DAG automaticamente
+apache-airflow-providers-postgres  # Operador e hook para conexões PostgreSQL no Airflow

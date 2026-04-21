@@ -1,0 +1,89 @@
+[0m23:37:58.855354 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7146fee452b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x714700a04050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7146fe6e2fd0>]}
+
+
+============================== 23:37:58.913573 | a16463d6-39f5-4523-9799-b0373692bfe9 ==============================
+[0m23:37:58.913573 [info ] [MainThread]: Running with dbt=1.11.8
+[0m23:37:58.914146 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'fail_fast': 'False', 'write_json': 'True', 'profiles_dir': '/home/gustavo/.dbt', 'debug': 'False', 'invocation_command': 'dbt init', 'introspect': 'True', 'log_format': 'default', 'log_path': 'logs', 'version_check': 'True', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'warn_error': 'None', 'empty': 'None', 'no_print': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'use_colors': 'True', 'cache_selected_only': 'False', 'indirect_selection': 'eager'}
+[0m23:37:58.987701 [info ] [MainThread]: Creating dbt configuration folder at /home/gustavo/.dbt
+[0m23:38:12.352330 [debug] [MainThread]: Starter project path: /home/gustavo/projetos/projeto_eng_dados/1_local_setup/.venv/lib/python3.13/site-packages/dbt/include/starter_project
+[0m23:38:12.372481 [info ] [MainThread]: 
+Your new dbt project "dw_bootcamp" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m23:38:12.372911 [info ] [MainThread]: Setting up your profile.
+[0m23:39:53.771406 [error] [MainThread]: Encountered an error:
+list index out of range
+[0m23:39:53.778259 [error] [MainThread]: Traceback (most recent call last):
+  File "/home/gustavo/projetos/projeto_eng_dados/1_local_setup/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/home/gustavo/projetos/projeto_eng_dados/1_local_setup/.venv/lib/python3.13/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "/home/gustavo/projetos/projeto_eng_dados/1_local_setup/.venv/lib/python3.13/site-packages/dbt/cli/main.py", line 488, in init
+    results = task.run()
+  File "/home/gustavo/projetos/projeto_eng_dados/1_local_setup/.venv/lib/python3.13/site-packages/dbt/task/init.py", line 346, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/home/gustavo/projetos/projeto_eng_dados/1_local_setup/.venv/lib/python3.13/site-packages/dbt/task/init.py", line 261, in setup_profile
+    adapter = self.ask_for_adapter_choice()
+  File "/home/gustavo/projetos/projeto_eng_dados/1_local_setup/.venv/lib/python3.13/site-packages/dbt/task/init.py", line 243, in ask_for_adapter_choice
+    return available_adapters[numeric_choice - 1]
+           ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^
+IndexError: list index out of range
+
+[0m23:39:53.779908 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 118.49835, "process_in_blocks": "92744", "process_kernel_time": 0.547555, "process_mem_max_rss": "123912", "process_out_blocks": "1504", "process_user_time": 1.238994}
+[0m23:39:53.780850 [debug] [MainThread]: Command `dbt init` failed at 23:39:53.780634 after 118.50 seconds
+[0m23:39:53.781627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7146fde2fbb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7146fdefc170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7146fdee4490>]}
+[0m23:39:53.782437 [debug] [MainThread]: Flushing usage events
+[0m23:39:54.405157 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m00:03:33.874617 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79da139352b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79da15358050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79da131d2fd0>]}
+
+
+============================== 00:03:33.883303 | 72fa49c1-0239-4fa0-94c7-20d11961dc31 ==============================
+[0m00:03:33.883303 [info ] [MainThread]: Running with dbt=1.11.8
+[0m00:03:33.883808 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'use_experimental_parser': 'False', 'debug': 'False', 'profiles_dir': '/home/gustavo/.dbt', 'log_path': 'logs', 'use_colors': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'warn_error': 'None', 'quiet': 'False', 'printer_width': '80', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'empty': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug', 'log_cache_events': 'False', 'partial_parse': 'True', 'introspect': 'True', 'indirect_selection': 'eager'}
+[0m00:03:33.913831 [info ] [MainThread]: dbt version: 1.11.8
+[0m00:03:33.914264 [info ] [MainThread]: python version: 3.13.13
+[0m00:03:33.914534 [info ] [MainThread]: python path: /home/gustavo/projetos/projeto_eng_dados/1_local_setup/.venv/bin/python
+[0m00:03:33.914764 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m00:03:33.915052 [info ] [MainThread]: Using profiles dir at /home/gustavo/.dbt
+[0m00:03:33.915271 [info ] [MainThread]: Using profiles.yml file at /home/gustavo/.dbt/profiles.yml
+[0m00:03:33.915476 [info ] [MainThread]: Using dbt_project.yml file at /home/gustavo/projetos/projeto_eng_dados/2_data_warehouse/dbt_project.yml
+[0m00:03:33.915701 [info ] [MainThread]: Configuration:
+[0m00:03:33.915930 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m00:03:33.916148 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m00:03:33.916344 [info ] [MainThread]: Required dependencies:
+[0m00:03:33.916567 [debug] [MainThread]: Executing "git --help"
+[0m00:03:33.919451 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m00:03:33.919803 [debug] [MainThread]: STDERR: "b''"
+[0m00:03:33.920045 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m00:03:33.920296 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m00:03:33.920572 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m00:03:33.920793 [info ] [MainThread]: dbt looked for a profiles.yml file in /home/gustavo/.dbt/profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m00:03:33.921055 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </home/gustavo/projetos/projeto_eng_dados/2_data_warehouse/dbt_project.yml> not found
+
+[0m00:03:33.921631 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.10108212, "process_in_blocks": "88856", "process_kernel_time": 0.384576, "process_mem_max_rss": "102996", "process_out_blocks": "72", "process_user_time": 1.047357}
+[0m00:03:33.921990 [debug] [MainThread]: Command `dbt debug` failed at 00:03:33.921917 after 0.10 seconds
+[0m00:03:33.922263 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79da12b15ba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79da12bdbbf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79da12971370>]}
+[0m00:03:33.922543 [debug] [MainThread]: Flushing usage events
+[0m00:03:34.521643 [debug] [MainThread]: An error was encountered while trying to flush usage events
