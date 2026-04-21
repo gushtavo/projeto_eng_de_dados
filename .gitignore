@@ -12,7 +12,7 @@ dist/
 wheels/
 *.egg-info
 .venv
-.env
+*.env
 venv/
 
 
