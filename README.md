@@ -371,3 +371,5 @@ dbt build
 cd ../../3_airflow
 astro dev start
 ```
+## 📩 Contato
+[Linkedin](https://www.linkedin.com/in/gushtavoroberto/) | 📧 almeida.gustavo0420@gmail.com
